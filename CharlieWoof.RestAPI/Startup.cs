@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using AutoMapper;
 using CharlieWoof.Core.Abstractions.Services;
 using CharlieWoof.Core.Abstractions.Services.MagicPackage;
@@ -24,8 +25,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-
-//using Swashbuckle.AspNetCore.Swagger;
+using NJsonSchema;
+using NSwag.AspNetCore;
 
 namespace CharlieWoof.RestAPI
 {
@@ -55,8 +56,7 @@ namespace CharlieWoof.RestAPI
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            // services.AddMvc();
-            // services.AddAutoMapper(a => a.AddProfile(new Mapping()));
+            services.AddAutoMapper(a => a.AddProfile(new Mapping()));
 
             //services
             services.AddScoped<IMagicPagesService, MagicPagesService>();
@@ -89,26 +89,12 @@ namespace CharlieWoof.RestAPI
 
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
-
-            services.AddSwaggerGen(swagger =>
-            {
-                swagger.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "CharlieWoof" });
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //if (env.IsDevelopment())
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CharlieWoof");
-            });
-
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseDeveloperExceptionPage();
 
             app.UseStaticFiles();
 
@@ -123,21 +109,12 @@ namespace CharlieWoof.RestAPI
                 routes.MapRoute("default", "{controller=Welcome}/{action=Index}/{id?}");
             });
 
-
             // Enable the Swagger UI middleware and the Swagger generator
-            //app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, settings =>
-            //{
-            //    settings.GeneratorSettings.DefaultPropertyNameHandling =
-            //            PropertyNameHandling.CamelCase;
-            //});
-
-
-            //app.UseSwagger();
-            //app.UseSwaggerUI(c =>
-            //{
-            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ICT web API v1");
-            //    c.RoutePrefix = string.Empty;
-            //});
+            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, settings =>
+            {
+                settings.GeneratorSettings.DefaultPropertyNameHandling =
+                        PropertyNameHandling.CamelCase;
+            });
         }
 
         private void ConfigureAuth(ref IServiceCollection services)

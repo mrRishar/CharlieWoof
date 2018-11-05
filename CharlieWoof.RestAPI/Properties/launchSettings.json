@@ -12,15 +12,17 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "welcome",
       "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT2": "Development",
         "ASPNETCORE_ENVIRONMENT": "Production"
-      }
+      },
+      "applicationUrl": "http://charliegroom.com.ua"
     },
     "CharlieWoof.RestAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "welcome",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

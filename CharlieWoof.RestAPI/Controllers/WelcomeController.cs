@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CharlieWoof.RestAPI.Controllers
 {
-    [Route("/")]
+    [Route("/welcome")]
+    [AllowAnonymous]
     public class WelcomeController : ControllerBase
     {
         [HttpGet]
-        [AllowAnonymous]
         public IActionResult Get()
         {
-            return Ok("Welcome to ICT Rest API");
+            return Ok("Welcome to Charlie Woof Rest API");
         }
     }
 }
