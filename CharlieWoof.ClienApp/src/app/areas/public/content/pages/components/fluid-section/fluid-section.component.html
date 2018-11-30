@@ -1,0 +1,116 @@
+<section class="fluid-section-one">
+    <div class="auto-container">
+        <!--Sec Title-->
+        <div class="sec-title centered">
+            <div class="separator">
+                <span class="icon flaticon-pawprint-1"></span>
+            </div>
+            <div class="title">Grooming With Love And Care</div>
+            <h2>Курси Грумінгу</h2>
+        </div>
+    </div>
+
+    <div class="outer-container clearfix">
+
+        <!--Image Column-->
+        <div class="image-column">
+            <img style="display:inline-block; width:131%; height:100%;" src="../../../../../../../assets/app/media/images/curseGuming1.jpg"
+                alt="">
+        </div>
+
+        <!--Content Column-->
+        <div class="content-column" style="background-image:url(../../../../../../../assets/app/media/images/resource/image-2.jpg)">
+            <div class="inner-column">
+
+                <div class="featured-block-two">
+                    <div class="featured-inner">
+                        <div class="icon-box">
+                            <span class="icon">
+                                <img style=" margin: 18px;" src="../../../../../../../assets/app/media/images/icon/brush.png">
+                            </span>
+                        </div>
+                        <h3>Забезпечення усіма інструментами</h3>
+                        <div class="text">
+                            Ми будуємо навчальний процес за принципом, краще
+                            <br>один раз зробити своїми руками, ніж сто разів
+                            <br> прочитати або побачити в інтернеті.
+                            <br>Навчання проводиться протягом 7 робочих днів.
+                            <br>Кількість слухачів в групі не більше 3 чол.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-block-two">
+                    <div class="featured-inner">
+                        <div class="icon-box">
+                            <span class="icon">
+                                <img style=" margin: 18px;" src="../../../../../../../assets/app/media/images/icon/soap.png">
+                            </span>
+                        </div>
+                        <h3>Максимум практики</h3>
+                        <div class="text">Косметологія</div>
+                    </div>
+                </div>
+
+                <div class="featured-block-two">
+                    <div class="featured-inner">
+                        <div class="icon-box">
+                            <span class="icon">
+                                <img style=" margin: 18px;" src="../../../../../../../assets/app/media/images/icon/quality.png">
+                            </span>
+                        </div>
+                        <h3>Викладач атестований Європейською Асоціацією Грумерів EGA</h3>
+                        <div class="text">
+                            В Додатку до курсу інформація та схеми стрижок,
+                            <br> довідник для початківців
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group text-center col-md-12 col-sm-12 col-xs-12">
+                    <button type="submit" class="theme-btn btn-style-two" (click)="openModal('custom-modal-3')">Записатися</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <modal id="custom-modal-3" style="z-index:998;">
+        <div class="modal-background">
+            <div class="notification-window">
+                <div class="contact-formCourses">
+                    <img src="../../../../../../../assets/app/media/images/logo-charliewoof22.png" style="width: 175px; height: 100px;">
+                    <h2 class="notification-header2">Будь ласка, введіть ваші дані</h2>
+                    <button class="notification-buttonX" aria-label="Close" (click)="closeModal('custom-modal-3');">&times;</button>
+
+
+                    <form [formGroup]="sendFormDateCourses" (ngSubmit)="contactForm()">
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="name" value="" placeholder="Ім'я*" [(ngModel)]="addToCourses.name" formControlName="userName"
+                                required>
+                        </div>
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="phone" value="" placeholder="Телефон*" [(ngModel)]="addToCourses.phone" formControlName="userPhone"
+                                required>
+                        </div>
+                        <!--Form Group--> 
+                        <!-- <div class="alert-error" *ngIf="sendFormDateCourses.invalid && submitted">
+                            <label> Будь ласка, введіть дані у кожному з наведених полів</label>
+                        </div> -->
+
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <button type="submit" class="notification-button">Надіслати</button>
+                        </div>
+                       
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-background1"></div>
+        </div>
+    </modal>
+
+</section>

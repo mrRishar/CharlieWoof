@@ -1,0 +1,230 @@
+<!-- <div class="row">
+    <div class="col-md-7">
+        <form [formGroup]="candidatePageFrom">
+            <section class="form-block">
+                <div class="form-group">
+                    <label for="firstName">
+                        {{'candidatePage.firstName' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true"
+                         role="tooltip" [class.invalid]="candidatePageFrom.get('firstName')?.invalid && (candidatePageFrom.get('firstName')?.dirty || candidatePageFrom.get('firstName')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.firstName' | translate}}"
+                               formControlName="firstName" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('firstName')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">
+                        {{'candidatePage.lastName' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true" role="tooltip"
+                         [class.invalid]="candidatePageFrom.get('lastName')?.invalid && (candidatePageFrom.get('lastName')?.dirty || candidatePageFrom.get('lastName')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.lastName' | translate}}"
+                               formControlName="lastName" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('lastName')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experienceId">
+                        {{'candidatePage.experience' | translate}}:
+                    </label>
+
+                    <div class="select">
+                        <select formControlName="experienceId">
+                            <option value="{{experience.value}}" *ngFor="let experience of experiences">
+                                {{'enums.experience.' + experience.name | translate }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="technologiesId">
+                        {{'candidatePage.technologies' | translate}}:
+                    </label>
+
+                    <div class="checkboxlist-scroll">
+                        <div *ngFor="let technology of technologies" class="checkbox">
+                            <input type="checkbox" id="{{technology?.id}}" value="{{technology?.id}}" [checked]="candidatePageFrom?.get('technologyIds')?.value?.indexOf(technology?.id)>=0"
+                                (change)="vacancyTechnologiesChange($event)">
+                            <label for="{{technology?.id}}">
+                                {{technology.name}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        {{'candidatePage.email' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true" role="tooltip"
+                         [class.invalid]="candidatePageFrom.get('email')?.invalid && (candidatePageFrom.get('email')?.dirty || candidatePageFrom.get('email')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.email' | translate}}" formControlName="email" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('email')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="skype">
+                        {{'candidatePage.skype' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true" role="tooltip"
+                         [class.invalid]="candidatePageFrom.get('skype')?.invalid && (candidatePageFrom.get('skype')?.dirty || candidatePageFrom.get('skype')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.skype' | translate}}" formControlName="skype" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('skype')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedIn">
+                        {{'candidatePage.linkedIn' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true" role="tooltip"
+                         [class.invalid]="candidatePageFrom.get('linkedIn')?.invalid && (candidatePageFrom.get('linkedIn')?.dirty || candidatePageFrom.get('linkedIn')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.linkedIn' | translate}}"
+                               formControlName="linkedIn" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('linkedIn')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">
+                        {{'candidatePage.phone' | translate}}:
+                    </label>
+
+                    <div class="tooltip tooltip-validation tooltip-sm" aria-haspopup="true" role="tooltip"
+                         [class.invalid]="candidatePageFrom.get('phone')?.invalid && (candidatePageFrom.get('phone')?.dirty || candidatePageFrom.get('phone')?.touched)">
+                        <input class="form-control" type="text" placeholder="{{'candidatePage.phone' | translate}}" formControlName="phone" size="40">
+                        <span class="tooltip-content">
+                            {{ validationService.getValidatorErrorMessage(candidatePageFrom.get('phone')) }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvPath">
+                        {{'candidatePage.cv' | translate}}
+                    </label>
+                    <div>
+                        <a class='btn btn-sm'>
+                            {{'candidatePage.addFile' | translate}}
+                            <input type="file" accept=".pdf,.doc,.docx"
+                                   style='position:absolute; left:6cm; opacity: 0;'
+                                   onchange='$("#upload-file-info").html($(this).val());'>
+                        </a>
+                    </div>
+                </div>
+
+                <input type="hidden" formControlName="id">
+
+                <button type="button" class="btn btn-primary" [disabled]="!candidatePageFrom.valid || candidatePageFrom.pristine" (click)="saveCandidateClick($event)">{{'candidatePage.save' | translate}}</button>
+                <button type="button" class="btn btn-secondary" (click)="cancelClick($event)">{{'candidatePage.cancel' | translate}}</button>
+            </section>
+        </form>
+    </div>
+
+    <div class="col-md-5" *ngIf="id">
+        <clr-datagrid (clrDgRefresh)="refreshCurrentVacancyList()" [(clrDgSelected)]="selectedVacanciesOfCandidate">
+            <clr-dg-action-bar>
+                <clr-button-group class="btn-outline btn-sm">
+                    <clr-button [disabled]="candidatePageFrom.get('technologyIds').invalid && candidatePageFrom.get('technologyIds').dirty" (click)="showModal($event)">
+                        {{'candidatePage.add' | translate}}
+                    </clr-button>
+                </clr-button-group>
+                <clr-button-group class="btn-danger-outline btn-sm">
+                    <clr-button [disabled]="!selectedVacanciesOfCandidate || selectedVacanciesOfCandidate.length===0" (click)="deleteVacancyClick($event)">
+                        {{'candidatePage.delete' | translate}}
+                    </clr-button>
+                </clr-button-group>
+            </clr-dg-action-bar>
+
+            <clr-dg-column>
+                {{'candidatePage.vacancy' | translate}}
+            </clr-dg-column>
+            <clr-dg-column>
+                {{'candidatePage.stage' | translate}}
+            </clr-dg-column>
+
+            <clr-dg-row *ngFor="let candidateVacancy of candidateVacancyStage" [clrDgItem]="candidateVacancy">
+                <clr-dg-cell>
+                    <a [routerLink]="['/vacancies/details', candidateVacancy?.id]">
+                        {{candidateVacancy?.title}}
+                    </a>
+                </clr-dg-cell>
+                <clr-dg-cell>
+                    {{vacancyStages[candidateVacancy?.vacancyStage]?.name}}
+                </clr-dg-cell>
+            </clr-dg-row>
+
+            <clr-dg-footer>
+
+            </clr-dg-footer>
+        </clr-datagrid>
+    </div>
+</div>
+
+<clr-modal *ngIf="candidateAttachVacancyForm" [(clrModalOpen)]="setStageModalVisible">
+    <h3 class="modal-title">
+        {{'candidatePage.attachVacancyToCandidate' | translate}}
+    </h3>
+    <div class="modal-body">
+        <form [formGroup]="candidateAttachVacancyForm">
+            <section class="form-block">
+                <div class="form-group">
+                    <label for="vacancyId" class="required">
+                        {{'candidatePage.vacancy' | translate}}
+                    </label>
+
+                    <div class="select">
+                        <select formControlName="vacancyId">
+                            <option *ngFor="let vacancy of vacancies" [value]="vacancy.id">
+                                {{vacancy.title}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vacancyStage" class="required">
+                        {{'candidatePage.stage' | translate}}
+                    </label>
+
+                    <div class="select">
+                        <select formControlName="vacancyStage">
+                            <option *ngFor="let vacancyStage of vacancyStages" [value]="vacancyStage.value">
+                                {{ 'enums.vacancyStage.' + vacancyStage.name | translate }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" [disabled]="!candidateAttachVacancyForm.valid || candidateAttachVacancyForm.pristine"
+            (click)="attachToVacancyClick($event)">
+            {{'candidatePage.save' | translate}}
+        </button>
+        <button type="button" class="btn btn-info" (click)="setStageModalVisible = false;">
+            {{'candidatePage.cancel' | translate}}
+        </button>
+    </div>
+</clr-modal> -->

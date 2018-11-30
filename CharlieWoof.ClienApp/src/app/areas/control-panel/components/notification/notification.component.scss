@@ -1,0 +1,55 @@
+.notification-container {
+    display: -webkit-inline-box;
+    position: absolute;
+    right: 70px;
+    top: 100px;
+    border: solid 1px;
+    border-radius: 3px;
+    height: 50px;
+    line-height: 50px;
+    -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+    overflow: hidden;
+    width: 0px;
+    visibility: hidden;
+    background-color: white;
+    z-index: 1;
+
+    &.visible {
+        display: -webkit-inline-box;
+        width: 400px;
+        visibility: visible;
+    }
+
+    &.success {
+        border-color: #62a420;
+    }
+
+    &.error {
+        border-color: #c92100;
+    }
+}
+
+.notification-icon {
+    color: #fff;
+    padding: 0px 11px;
+
+    &.success {
+        background: #62a420;
+    }
+
+    &.error {
+        background: #c92100;
+    }
+
+    & > clr-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.notification-message {
+    padding: 0 16px;
+    max-width: 500px;
+    overflow: hidden;
+}

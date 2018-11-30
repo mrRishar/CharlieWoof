@@ -1,0 +1,48 @@
+.team-section .inner-container table {
+    border-collapse: collapse;
+    width: 100vw;
+    height: 100vh;
+}
+
+.team-section .inner-container th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.team-section .inner-container #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(62, 53, 53);
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 90%;
+    font-family: Monotype Corsiva, cursive;
+    font-size: 110%;
+}
+
+.team-section .inner-container #customers th p{
+    font-family: Monotype Corsiva, cursive;
+    font-size: 250%;
+}
+
+.team-section .inner-container #customers tr{
+    background-color: #ffffff;
+}
+
+.team-section .inner-container #customers tr td{
+    text-align: center;
+}
+
+.team-section .inner-container #customers tr:hover {
+    color: rgb(247, 204, 63);
+}
+
+
+.team-section .inner-container .imageprice{
+max-width: 100vw;
+margin-left: auto;
+margin-right: auto;
+}

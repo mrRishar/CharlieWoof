@@ -1,0 +1,96 @@
+<!-- <clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading" [(clrDgSelected)]="selectedCandidates">
+    <clr-dg-action-bar>
+        <clr-button-group class="btn-sm">
+            <clr-button class="btn-success-outline" [routerLink]="['newcandidate']">
+                <clr-icon shape="plus"></clr-icon>
+                {{'candidateList.add' | translate}}
+            </clr-button>
+            <clr-button class="btn-success-outline" [clrInMenu]="true" [disabled]="selectedCandidates.length===0" (click)="changeStatus($event, selectedCandidates, active)">
+                {{'candidateList.setActive' | translate}}
+            </clr-button>
+            <clr-button class="btn-success-outline" [clrInMenu]="true" [disabled]="selectedCandidates.length===0" (click)="changeStatus($event, selectedCandidates, archived)">
+                {{'candidateList.setArchived' | translate}}
+            </clr-button>
+            <clr-button class="btn-success-outline" [clrInMenu]="true" [disabled]="selectedCandidates.length===0" (click)="changeStatus($event, selectedCandidates, deleted)">
+                {{'candidateList.setDeleted' | translate}}
+            </clr-button>
+        </clr-button-group>
+        <clr-button-group class="btn-sm align-left-button-group">
+            <clr-button class="btn-secondary-outline" (click)="getVacanciesByStatusType($event,item?.value)" *ngFor="let item of statuses">
+                {{'candidateList.show' | translate}} {{ 'enums.statusType.' + item?.name | translate }}
+            </clr-button>
+        </clr-button-group>
+    </clr-dg-action-bar>
+
+    <clr-dg-column [clrDgField]="'firstName'">
+        {{'candidateList.firstName' | translate}}
+        <clr-dg-filter [clrDgFilter]="firstNameFilter">
+            <apl-clr-datagrid-text-filter #firstNameFilter [propertyName]="'firstName'">
+            </apl-clr-datagrid-text-filter>
+        </clr-dg-filter>
+    </clr-dg-column>
+    <clr-dg-column [clrDgField]="'lastName'">
+        {{'candidateList.lastName' | translate}}
+
+        <clr-dg-filter [clrDgFilter]="lastNameFilter">
+            <apl-clr-datagrid-text-filter #lastNameFilter [propertyName]="'lastName'">
+            </apl-clr-datagrid-text-filter>
+        </clr-dg-filter>
+    </clr-dg-column>
+    <clr-dg-column [clrDgField]="'experienceId'">
+        {{'candidateList.experienceLevels' | translate}}
+
+        <clr-dg-filter [clrDgFilter]="experienceFilter">
+            <apl-clr-datagrid-experience-filter #experienceFilter [propertyName]="'experienceId'" [experiences]="experiences">
+            </apl-clr-datagrid-experience-filter>
+        </clr-dg-filter>
+    </clr-dg-column>
+    <clr-dg-column [clrDgField]="'email'">
+        {{'candidateList.email' | translate}}
+
+        <clr-dg-filter [clrDgFilter]="emailFilter">
+            <apl-clr-datagrid-text-filter #emailFilter [propertyName]="'email'">
+            </apl-clr-datagrid-text-filter>
+        </clr-dg-filter>
+    </clr-dg-column>
+    <clr-dg-column>
+        {{'candidateList.status' | translate}}
+    </clr-dg-column>
+
+    <clr-dg-placeholder>
+        {{'candidateList.placeholderCandidateListDataGrid' | translate}}
+    </clr-dg-placeholder>
+
+    <clr-dg-row *ngFor="let candidate of candidates" [clrDgItem]="candidate">
+        <clr-dg-action-overflow>
+            <button class="action-item" (click)="changeStatus($event, [candidate], active)">{{'candidateList.activate' | translate}}</button>
+            <button class="action-item" (click)="changeStatus($event, [candidate], archived)">{{'candidateList.archive' | translate}}</button>
+            <button class="action-item" (click)="changeStatus($event, [candidate], deleted)">{{'candidateList.delete' | translate}}</button>
+        </clr-dg-action-overflow>
+
+        <clr-dg-cell>
+            <a [routerLink]="['/candidates/details', candidate.id]" routerLinkActive="active">
+                {{candidate?.firstName}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <a [routerLink]="['/candidates/details', candidate.id]" routerLinkActive="active">
+                {{candidate?.lastName}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            {{'enums.experience.' + experiences[candidate?.experienceId]?.name | translate }}
+        </clr-dg-cell>
+        <clr-dg-cell>
+            {{candidate?.email}}
+        </clr-dg-cell>
+        <clr-dg-cell>
+            {{'enums.statusType.' + statuses[candidate?.statusId]?.name | translate }}
+        </clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} {{'candidateList.of' | translate}} {{pagination.totalItems}} {{
+        'candidateList.users' | translate }}
+        <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="totalCount"></clr-dg-pagination>
+    </clr-dg-footer>
+</clr-datagrid> -->

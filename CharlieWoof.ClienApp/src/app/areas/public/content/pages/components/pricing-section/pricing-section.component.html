@@ -1,0 +1,134 @@
+<section class="team-section" #target>
+    <!--Pricing Section-->
+
+    <section class="pricing-section">
+        <div class="auto-container">
+            <!--Sec Title-->
+            <div class="sec-title centered">
+                <div class="separator">
+                    <span class="icon flaticon-pawprint-1"></span>
+                </div>
+                <div class="title">Grooming With Love And Care</div>
+                <h2>Прайс</h2>
+            </div>
+
+            <!--Sec Title Two-->
+
+            <div class="inner-container">
+                <div class="row clearfix">
+                    <table class="table table-striped" id="customers">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <p>Комплексна стрижка</p>
+                                    (Купання двома шампунями: глибокої очистки , відповідний типу шерсті, бальзамом, обрізання кігтів, чищення вушок, сушка з
+                                    укладкою, розчісування, стрижка pet а бо породна)
+                                </th>
+                                <th>
+                                    <p>Гігієнічний догляд</p>
+                                    (Купання двома шампунями: глибокої очистки, відповідний типу шерсті, бальзамом, обрізання кігтів, чищення вушок, сушка з
+                                    укладкою, розчісування, стрижка інтимних зон)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of items">
+                                <td>{{item.name}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.pricesecond}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-triming"></div>
+                    <table class="table table-striped" id="customers">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <p>Тримінг</p>
+                                    Акуратне вищіпування частини шерсті у жорсткошертних порід собак, обрізання кігтів, чищення вушок, купання двома шампунями
+                                    (глибокої очистки та відповідний типу шерсті) використання двох бальзамів (заспокійливий
+                                    після тиримінгу та відповідний типу шерсті), сушка, розчісування, породна або pet стрижка
+
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of trimingitems">
+                                <td>{{item.name}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.pricesecond}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-cats"></div>
+                    <table class="table table-striped" id="customers">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <p style="left:-27%">Догляд за кішками</p>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of catitems">
+                                <td>{{item.name}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.pricesecond}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-plass"></div>
+                    <table class="table table-striped" id="customers">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <p style="left:-42%">Додаткові послуги</p>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of plassitems">
+                                <td>{{item.name}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.pricesecond}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Pricing Section-->
+</section>

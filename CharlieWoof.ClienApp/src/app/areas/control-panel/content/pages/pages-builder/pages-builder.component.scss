@@ -1,0 +1,43 @@
+.class-decorator {
+    display: inline-block;
+    border: 1px solid black;
+}
+
+table {
+    margin-left: 10px;
+    padding-left: 30px;
+}
+
+.range {
+    margin-top: 5px;
+}
+
+.salary {
+    width: 40px;
+    height: 25px;
+}
+
+.search-input {
+    margin-left: -20px;
+    padding-left: 20px;
+}
+
+.username-list {
+    margin-bottom: 0;
+
+    .username:not(:last-child)::after {
+        content: ", ";
+    }
+
+    .username:last-child::after {
+        content: ".";
+    }
+}
+
+.align-left-button-group {
+    float: right;
+}
+
+.datagrid-action-bar{
+    display: block;
+}

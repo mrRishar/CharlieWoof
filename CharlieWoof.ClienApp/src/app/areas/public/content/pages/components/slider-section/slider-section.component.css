@@ -1,0 +1,58 @@
+.container{
+    width: 100vw;
+    }
+
+.carousel slide{    
+    width: 100vw;
+   }
+   .item .carousel-caption .htext{
+    position: relative;
+    /* line-height: 50vw; */
+    font-family: 'Merriweather', serif;
+    color: #ffffff;
+    font-size: 50px;
+    right: 20vw;
+}
+
+
+
+.carousel .carousel-control-prev{
+    background: #615a5a;
+    border-radius: 100%;
+    top: 500px;
+    width: 90px;
+    height: 90px;
+    z-index: 999;
+    margin-left: 12px;
+}
+
+.carousel .carousel-control-next{
+    background: #615a5a;
+    border-radius: 100%;
+    top: 500px;
+    width: 90px;
+    height: 90px;
+    z-index: 999;    
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .slider-block{
+        z-index: -1!important;
+    }
+    /* For mobile phones: */
+    .item .carousel-caption .htext {
+        font-size: 15px;
+    }
+
+    .carousel .carousel-control-prev{
+        display: none;
+    }
+
+    .carousel .carousel-control-next{
+        display: none;
+    }
+
+   
+}

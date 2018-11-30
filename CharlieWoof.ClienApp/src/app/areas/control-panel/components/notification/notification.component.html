@@ -1,0 +1,9 @@
+<div class="notification-container" [ngClass]="{'visible': visible}">
+    <div class="notification-icon" [ngClass]="{'success': notificationType === successNotificatioType, 'error': notificationType === errorNotificatioType}">
+        <clr-icon *ngIf="notificationType === successNotificatioType" shape="success-standard"></clr-icon>
+        <clr-icon *ngIf="notificationType === errorNotificatioType" shape="error-standard"></clr-icon>
+    </div>
+    <div class="notification-message">
+        {{message | translate}}
+    </div>
+</div>
