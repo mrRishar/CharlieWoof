@@ -1,0 +1,14 @@
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\CharlieWoof.Data.deps.json
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\CharlieWoof.Data.dll
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\CharlieWoof.Data.pdb
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\CharlieWoof.Core.dll
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\CharlieWoof.Core.pdb
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\bin\Release\netcoreapp2.1\Microsoft.IdentityModel.Tokens.xml
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.csprojAssemblyReference.cache
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.AssemblyInfoInputs.cache
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.AssemblyInfo.cs
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.csproj.CopyComplete
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.dll
+C:\Users\User\Documents\New folder\CW\CharlieWoof.Data\obj\Release\netcoreapp2.1\CharlieWoof.Data.pdb

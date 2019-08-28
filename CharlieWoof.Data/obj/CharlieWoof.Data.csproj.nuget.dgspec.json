@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj",
+        "projectName": "CharlieWoof.Core",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj",
+        "projectName": "CharlieWoof.Data",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.0-preview2-35157, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

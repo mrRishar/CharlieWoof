@@ -1,0 +1,330 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.RestAPI\\CharlieWoof.RestAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj",
+        "projectName": "CharlieWoof.Core",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj",
+        "projectName": "CharlieWoof.Data",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.0-preview2-35157, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.RestAPI\\CharlieWoof.RestAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.RestAPI\\CharlieWoof.RestAPI.csproj",
+        "projectName": "CharlieWoof.RestAPI",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.RestAPI\\CharlieWoof.RestAPI.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.RestAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj"
+              },
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\CharlieWoof.Services.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\CharlieWoof.Services.csproj"
+              },
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\CharlieWoof.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\CharlieWoof.Services.csproj",
+        "projectName": "CharlieWoof.Services",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\CharlieWoof.Services.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Core\\CharlieWoof.Core.csproj"
+              },
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\CharlieWoof.Data\\CharlieWoof.Data.csproj"
+              },
+              "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj": {
+                "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj",
+        "projectName": "Extensions",
+        "projectPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\Extensions.csproj",
+        "packagesPath": "C:\\Users\\Viren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viren\\OneDrive\\Документи\\New folder\\CW\\Extensions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Viren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dispenser.Hasher.Sha256": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "DocumentFormat.OpenXml.DotNet.Core": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "DotNetCore.NPOI": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
