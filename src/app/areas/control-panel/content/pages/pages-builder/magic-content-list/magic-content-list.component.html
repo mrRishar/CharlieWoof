@@ -1,0 +1,139 @@
+<div class="m-subheader__title">
+    Контент сторінки {{sectionName}}
+</div>
+<div class="main-div" #clickTable>
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Список контенту</p>
+                <div class="statusButton">
+                    <div class="add-button">
+                        <a class="aLink status" [routerLink]="['/ControlPanel/pagesBuilder/magicContentItem/newContentItem', magicPageId]" routerLinkActive="active">
+                            <span class="add-link">+ Створити</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead style="background-color: #edeef3;">
+                    <tr>
+                        <th class="clr-col-1 headerDataGrid">#</th>
+                        <th class="clr-col-3 headerDataGrid">Заголовок</th>
+                        <th class="clr-col-4 headerDataGrid">Опис</th>
+                        <th class="clr-col-3 headerDataGrid">Оновлення</th>
+                        <th class="clr-col-2 headerDataGrid"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of list;" class="tr-pageDuilder">
+                        <td class="clr-col-1 titleDataGrid ">
+                            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                                {{item?.SortNumder}}
+                            </a>
+                        </td>
+                        <td class="clr-col-3 titleDataGrid ">
+                            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                                {{item?.Title}}
+                            </a>
+                        </td>
+                        <td class="clr-col-4 titleDataGrid ">
+                            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                                {{item?.Description}}
+                            </a>
+                        </td>
+                        <td class="clr-col-3 titleDataGrid ">
+                            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                                {{item?.UpdatedOnUtc}}
+                            </a>
+                        </td>
+                        <td class="clr-col-2 titleDataGrid ">
+                            <div class="actions">
+                                <p class="ul-client">
+                                    <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                                        <span>
+                                            <img src="../../../../../../../assets/app/media/images/icon/edit.svg" style="height: 17px;">
+                                            <span class="delete-icon"> Редагувати</span>
+                                        </span>
+                                    </a>
+                                </p>
+                                <p class="ul-client">
+
+                                    <a class="aLink-button" (click)="openModalClick($event, pet?.Id)">
+                                        <img src="../../../../../../../assets/app/media/images/trash.svg" style="height: 17px;">
+                                        <span class="delete-icon">Видалити</span>
+                                    </a>
+                                </p>
+                            </div>
+                            <modal id="custom-modal-1" style="z-index:998;">
+                                <div class="modal-background">
+                                    <div class="notification-window">
+                                        <img class="warning-icon" src="./../../../../../../assets/app/media/images/icon/warning.png">
+                                        <h4 class="notification-header">Ви впевнені, що бажаєте це видалити?</h4>
+                                        <h5 class="notification-header">Цю дію неможливо відмінити.</h5>
+                                        <div class="buttons">
+                                            <button class="notification-button success" (click)="deleteMagicContentItemClick($event)">Продовжити</button>
+                                            <button class="notification-button danger" (click)="closeModal('custom-modal-1')">Скасувати</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-background1"></div>
+                                </div>
+                            </modal>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
+    <clr-dg-action-bar>
+        <clr-button-group class="btn-lg">
+        </clr-button-group>
+    </clr-dg-action-bar>
+    <!-- <clr-dg-column class="clr-col-1 headerDataGrid" [clrDgField]="title">
+        #
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-3 headerDataGrid" [clrDgField]="title">
+        Заголовок
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-4 headerDataGrid" [clrDgField]="description">
+        Опис
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-3 headerDataGrid" [clrDgField]="updatedOnUtc">
+        Оновлено
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-2 headerDataGrid">
+        <button class="notification-buttonX fa fa-plus" [routerLink]="['/ControlPanel/pagesBuilder/magicContentItem/newContentItem', magicPageId]"
+            routerLinkActive="active"></button>
+    </clr-dg-column>
+    <clr-dg-row *ngFor="let item of list; let i = index;" [clrDgItem]="item">
+        <clr-dg-cell class="clr-col-1 titleDataGrid">
+            {{i+1}}
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-3 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                {{item?.Title}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-4 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                {{item?.Description}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-3 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/pagesBuilder/contentList/magicContentItem', item?.Id]" routerLinkActive="active">
+                {{item?.UpdatedOnUtc}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-2 titleDataGrid ">
+            <button class="notification-buttonX fa fa-trash" (click)="deleteMagicContentItemClick($event, item?.Id)"></button>
+        </clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} секцій з {{pagination.totalItems}}
+        <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="totalCount"></clr-dg-pagination>
+    </clr-dg-footer> -->
+
+</clr-datagrid>

@@ -1,0 +1,134 @@
+<div class="main-div" #clickTable>
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Форма замовлення</p>
+                <div class="statusButton">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <!-- <div class="magicPageFormBlock"> -->
+                    <form [formGroup]="orderFrom">
+                        <section class="form-block">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="userName">
+                                        Клієнт
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{order.userName}}" [(ngModel)]="order.userName" formControlName="userName"
+                                        disabled>
+                                </div>
+                            </div>
+                            <input type="hidden" formControlName="id">
+                            <input type="hidden" formControlName="grummerUserId">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="petName">
+                                        Домашній улюбленець
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <select class="form-control" (change)="ChangingValuePet($event)">
+                                        <option [value]='selectedValue' selected>{{selectedValue.PetName}}</option>
+                                        <option *ngFor="let pet of pets" [value]='pet.Id'>{{pet.Name}}</option>
+                                    </select>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{order.petName}}" [(ngModel)]="order.petName" formControlName="petName"> -->
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="grummerName">
+                                        Грумер
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <select class="form-control" (change)="ChangingValue($event)">
+                                        <option [value]='selectedValue' selected>{{selectedValue.GrummerName}}</option>
+                                        <option *ngFor="let grummer of grummers" [value]='grummer.Id'>{{grummer.Firstname}} {{grummer.Secondname}}</option>
+                                    </select>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{order.grummerName}}" [(ngModel)]="order.grummerName" formControlName="grummerName"> -->
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="services">
+                                        Сервіс
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <select class="form-control" (change)="ChangingValueService($event)">
+                                        <option [value]='curentService' selected>{{curentService.name}}</option>
+                                        <option *ngFor="let service of servicesList" [value]='service.id'>{{service.name}}</option>
+                                    </select>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{order.service}}" [(ngModel)]="order.service" formControlName="service"> -->
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="status">
+                                        Статус
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <select class="form-control" (change)="ChangingValueStatus($event)">
+                                        <option [value]='curentStatus' selected>{{curentStatus.name}}</option>
+                                        <option *ngFor="let status of statuses; let i = index;" [value]='status.id'>{{status.name}}</option>
+                                    </select>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{order.status}}" [(ngModel)]="order.status" formControlName="status"> -->
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="date">
+                                        Дата
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="datetime" placeholder="mm/dd/yyyy" [(ngModel)]="order.date" formControlName="date">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="price">
+                                        Прайс
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{order.price}}" [(ngModel)]="order.price" formControlName="price">
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="note">
+                                        Нотатка
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{order.note}}" [(ngModel)]="order.note"
+                                        formControlName="note"></textarea>
+                                    <div class="panel" *ngIf="submitted && cheakVal">
+                                        <label class="panel"> Заповніть кожне з наведених полів</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group"> -->
+                            <div class="col-lg-8 col-xl-3">
+
+                                <div class="btn-group">
+                                    <button type="button" class="btn-accent notification-button success" (click)="saveMagicPageClick($event)">Зберегти</button>
+                                    <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </section>
+                    </form>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+:host {
+	.mat-form-field {
+		width: 100%;
+	}
+}
+.alert-error{
+	position: relative;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #ada3a3;
+	width: 100vw;
+	z-index: 999;
+}
+  
+body#LoginForm{ 
+  background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg");
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-heading { color:#fff; font-size:23px;}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel p {
+  color:#777777;
+  font-size:14px;
+  margin-bottom:30px;
+  line-height:24px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #747779;
+}
+
+.login-form .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+}
+.main-div {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 2px;
+    /* margin-left: auto; */
+    max-width: 40rem;
+    padding: 50px 70px 70px 71px;
+    background-color: white;
+    /* overflow: hidden; */
+    opacity: 0.8;
+}
+
+.login-form .form-group {
+  margin-bottom:10px;
+}
+.login-form{ text-align:center;}
+.forgot a {
+  color: #777777;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  color: #ffffff;
+  font-size: 14px;
+  width: 12rem;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  
+}
+.forgot {
+  text-align: left; margin-bottom:30px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.botto-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+  background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+.form-group1{
+	    /* display: flex; */
+    /* flex-wrap: wrap; */
+    position: relative;
+    /* margin-bottom: .5rem; */
+    font-size: inherit;
+    /* letter-spacing: normal; */
+    /* line-height: 1rem; */
+    padding-bottom: 32px;
+    /* width: 100%; */
+}
+
+.inputStyle {
+  border-left: none;
+  border-top: none;
+  padding: 10px 42px;
+  width: 24rem;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #747779;
+  text-align: center;
+}

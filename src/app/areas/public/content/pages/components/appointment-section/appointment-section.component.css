@@ -1,0 +1,218 @@
+.datepicker{ 
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #848484;
+  line-height: 28px;
+  padding: 10px 25px;
+  font-weight: 400;
+  background: #ffffff;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  z-index: 1;
+}
+
+/* MODAL STYLES
+-------------------------------*/
+modal {
+  display: none;
+} 
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:99;
+  }
+
+.modal-background1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: -1;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.notification-window-app{
+  background-color: #e7470c;
+  opacity: 1;
+  border-radius: 20px;
+  z-index: 1111;
+  display: inline-block;
+  padding: 15px;
+  width: 500px;
+  margin: 25vh calc(50vw - 250px);    
+}
+
+.notification-window{
+  background-color: #dadada;
+  opacity: 1;
+  border-radius: 20px;
+  z-index: 1111;
+  display: inline-block;
+  padding: 15px;
+  width: 500px;
+  margin: 25vh calc(50vw - 250px);    
+}
+
+img {
+  float: left;
+}
+
+.notification-button{
+  border-radius: 50px;
+  float: right;
+  padding: 10px 10px;
+  min-width: 120px;
+  font-size: 16px;
+  color: #ffffff;
+    
+  background-color: #e5a62d;
+  border: 2px solid #e5a62d;
+}
+
+.notification-button:hover {
+  background: none;
+  color: #e5a62d;
+}
+
+.notification-buttonX{
+  border-radius: 50px;
+  float: right;
+  padding: 5px 5px;
+  min-width: 40px;
+  font-size: 16px;
+  color: none;
+  background-color: none;
+  border: 2px solid #e5a62d;
+}
+.notification-buttonX:hover {
+  background: #cfa31d;
+  color: #dadada;
+}
+.notification-header1{
+  margin: -3% 0%;
+  padding: 5% 0%;
+  font-size: 164%;
+}
+
+.notification-header2{
+  margin: 18px 0px; 
+  font-size: 17px;
+}
+
+input.ng-touched.ng-invalid {
+  border:solid red 2px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #848484;
+  line-height: 28px;
+  padding: 10px 25px;
+  font-weight: 400;
+  background: #bd2222;
+  border-radius: 50px;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+ }
+
+ .alert-error{
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #ada3a3;
+  width: 100vw;
+ }
+ .alert-error-contactUs{
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #ada3a3;
+  width: 100vw;
+ margin-right: 36pc;
+ 
+ }
+
+/*input.ng-touched.ng-valid {
+  border:solid green 2px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #848484;
+  line-height: 28px;
+  padding: 10px 25px;
+  font-weight: 400;
+  background: #ffffff;
+  border-radius: 50px;
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+} */
+
+.form-control
+{
+  position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    color: #848484;
+    line-height: 28px;
+    padding: 10px 25px;
+    font-weight: 400;
+    background: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+@media only screen and (max-width: 640px) {
+  .notification-window, .notification-window-app{
+    width: 255px;
+    text-align: center;
+    margin: 20vh calc(79vw - 242px);
+  }
+
+  .notification-button:hover {
+    float: initial;
+  }
+  
+  .contact-formCourses {
+    position: relative;
+  }
+
+  /* .notification-buttonX{
+    margin-top: -200px;
+  } */
+   .btn-style-two{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+ 
+}

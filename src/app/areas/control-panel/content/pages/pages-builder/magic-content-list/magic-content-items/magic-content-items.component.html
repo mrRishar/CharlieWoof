@@ -1,0 +1,106 @@
+<div class="main-div" #clickTable>
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Форма замовлення</p>
+                <div class="statusButton">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <form [formGroup]="MagicContentItemFrom">
+
+                        <section class="form-block">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="title">
+                                        Заголовок
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicContentItem.title}}" [(ngModel)]="magicContentItem.title" formControlName="title">
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="description">
+                                        Опис
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicContentItem.description}}"
+                                        [(ngModel)]="magicContentItem.description" formControlName="description"></textarea>
+                                </div>
+                            </div>
+
+                            <input type="hidden" formControlName="id">
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="content">
+                                        Вміст
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicContentItem.content}}"
+                                        [(ngModel)]="magicContentItem.content" formControlName="content"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="css">
+                                        Стилі
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicContentItem.css}}" [(ngModel)]="magicContentItem.css" formControlName="css">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="icon">
+                                        Іконка
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicContentItem.icon}}" [(ngModel)]="magicContentItem.icon" formControlName="icon">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="sortNumder">
+                                        Порядковий номер
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicContentItem.sortNumder}}" [(ngModel)]="magicContentItem.sortNumder"
+                                        formControlName="sortNumder">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="image">
+                                        Зображення
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicContentItem.image}}" [(ngModel)]="magicContentItem.image" formControlName="image">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xl-9">
+                                <input class="form-control" type="hidden" placeholder="{{magicContentItem.magicPageId}}" [(ngModel)]="magicContentItem.magicPageId"
+                                    formControlName="magicPageId">
+                            </div>
+                            <div class="col-lg-8 col-xl-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-accent notification-button success" (click)="saveMagicContentItemClick($event)">Зберегти</button>
+                                    <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

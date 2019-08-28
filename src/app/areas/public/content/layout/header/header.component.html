@@ -1,0 +1,72 @@
+<header class="main-header" style="z-index:999">
+
+	<!--Header Top-->
+	<div class="header-top">
+		<div class="auto-container">
+			<div class="top-inner">
+				<div class="clearfix">
+					<div class="top-left">
+						<ul class="clearfix">
+							<li class="adress-phone-email-styles">
+								<span class="icon flaticon-map-marker"></span>{{getMagicPageForType(EnumNames.contact)?.Content}}
+							</li>
+							<li class="adress-phone-email-styles">
+								<span class="icon flaticon-telephone-handle-silhouette"></span>{{getMagicPageForType(EnumNames.contact)?.SeoTitle}}</li>
+							<li class="adress-phone-email-styles">
+								<span class="icon fa fa-envelope"></span>{{getMagicPageForType(EnumNames.contact)?.SeoDescription}}
+							</li>
+						</ul>
+					</div>
+					<div class="top-right clearfix">
+						<div class="social-icon">
+							<ul class="clearfix">
+								<li>
+									<a target="_blank" rel="noopener noreferrer" href="{{getMagicPageForType(EnumNames.links)?.Content}}">
+										<span class="fa fa-facebook-square"></span>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" rel="noopener noreferrer" href="{{getMagicPageForType(EnumNames.links)?.SeoTitle}}">
+										<span class="fa fa-instagram"></span>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" rel="noopener noreferrer" href="{{getMagicPageForType(EnumNames.links)?.SeoDescription}}">
+										<span class="fa fa-youtube-play"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="header-upper" style="z-index:999; background-color:#fff">
+		<div class="auto-container clearfix">
+
+			<div class="pull-left logo-outer">
+				<div class="logo">
+					<img class="topbar-logo" src="{{getMagicPageForType(EnumNames.contact)?.SeoKeywords}}" alt="" title="">
+				</div>
+			</div>
+			<m-app-topbar style="z-index:1"></m-app-topbar>
+		</div>
+	</div>
+</header>
+
+
+<div class="header-sticky">
+	<div class="auto-container1 ">
+		<div class="pull-left logo-outer">
+			<div class="logo">
+				<img class="topbar-logo" src="{{getMagicPageForType(EnumNames.contact)?.SeoKeywords}}" alt="" title="">
+			</div>
+		</div>
+		<m-app-topbar></m-app-topbar>
+	</div>
+	<li class="top-phone">
+		<span class="icon flaticon-telephone-handle-silhouette"></span>{{getMagicPageForType(EnumNames.contact)?.SeoTitle}}
+	</li>
+</div>

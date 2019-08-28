@@ -1,0 +1,41 @@
+.header-sticky{
+    background-color: rgb(255, 255, 255);
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index:998;
+	transition: top 0.3s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.top-phone{
+    border-radius: 12px; 
+	display: table;	
+	padding-top: 35px;
+    padding-left: 2%;
+}  
+
+.topbar-logo{
+}
+
+.adress-phone-email-styles{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 640px) {
+	.top-phone {
+		padding-top: 11px;
+		padding-left: 37px;
+		font-size: 15px;
+	}	
+
+	.topbar-logo {
+		height: 50px;
+    	float: left;
+	}
+
+	.header-sticky {
+	padding: 10px;
+	}
+}

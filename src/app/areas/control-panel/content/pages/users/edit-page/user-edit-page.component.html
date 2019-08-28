@@ -1,0 +1,193 @@
+<div *ngIf="user.role !==4 && !clientSide">
+    <div class="main-div">
+        <div class="control-panel">
+            <div class="portlet">
+                <div class="panel">
+                    <p>Персональні дані</p>
+                    <div class="statusButton">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <!-- <div class="userFormBlock"> -->
+                        <form [formGroup]="userFrom">
+                            <section class="form-block">
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="firstname">
+                                            Ім'я
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.firstname}}" [(ngModel)]="user.firstname" formControlName="firstname">
+                                    </div>
+                                </div>
+                                <input type="hidden" formControlName="id">
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="secondname">
+                                            Прізвище
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.secondname}}" [(ngModel)]="user.secondname" formControlName="secondname">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="email">
+                                            Електронна пошта
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="email" placeholder="{{user.email}}" [(ngModel)]="user.email" formControlName="email">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="phone">
+                                            Телефон
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.phone}}" [(ngModel)]="user.phone" formControlName="phone">
+                                    </div>
+                                </div>
+                                <input class="form-control" type="hidden" placeholder="{{user.role}}" [(ngModel)]="user.role" formControlName="role">
+                                <div class="form-group1" *ngIf="!id">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="passwordHash">
+                                            Пароль
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="password" placeholder="{{user.passwordHash}}" [(ngModel)]="user.passwordHash" formControlName="passwordHash">
+                                    </div>
+                                </div>
+                                <div class="form-group1" *ngIf="!id">
+                                    <div class="panel" *ngIf="submitted && !cheakVal">
+                                        <label class="panel"> Заповніть кожне з наведених полів</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-xl-3">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn-accent notification-button success" (click)="saveUserClick($event)">Зберегти</button>
+                                        <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="clientSide|| user.role === 4  ">
+    <div class="main-div">
+        <div class="control-panel">
+            <div class="portlet">
+                <div class="panel">
+                    <p>Персональні дані</p>
+                    <div class="statusButton">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <form [formGroup]="userFrom">
+                            <section class="form-block">
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="firstname">
+                                            Ім'я
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.firstname}}" [(ngModel)]="user.firstname" formControlName="firstname">
+                                    </div>
+                                </div>
+                                <input type="hidden" formControlName="id">
+
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="secondname">
+                                            Прізвище
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.secondname}}" [(ngModel)]="user.secondname" formControlName="secondname">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="email">
+                                            Електронна пошта
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="email" placeholder="{{user.email}}" [(ngModel)]="user.email" formControlName="email">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="phone">
+                                            Телефон
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.phone}}" [(ngModel)]="user.phone" formControlName="phone">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="birthday">
+                                            День народження
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.birthday}}" [(ngModel)]="user.birthday" formControlName="birthday">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+                                        <label class="label-form" for="street">
+                                            Вулиця
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.street}}" [(ngModel)]="user.street" formControlName="street">
+                                    </div>
+                                </div>
+                                <div class="form-group1">
+                                    <div class="col-lg-8 col-xl-3">
+
+                                        <label class="label-form" for="note">
+                                            Нотатка
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-8 col-xl-9">
+                                        <input class="form-control" type="text" placeholder="{{user.note}}" [(ngModel)]="user.note" formControlName="note">
+                                    </div>
+                                </div>
+                                <input class="form-control" type="hidden" placeholder="{{user.role}}" [(ngModel)]="user.role" formControlName="role">
+                                <div class="form-group1" *ngIf="!id">
+                                    <div class="panel" *ngIf="submitted && !cheakVal">
+                                        <label class="panel"> Заповніть кожне з наведених полів</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-xl-3">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn-accent notification-button success" (click)="saveUserClick($event)">Зберегти</button>
+                                        <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

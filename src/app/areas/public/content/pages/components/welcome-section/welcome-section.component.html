@@ -1,0 +1,29 @@
+<section class="welcome-section">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <div class="separator">
+                <span class="icon flaticon-pawprint-1"></span>
+            </div>
+            <div class="title">{{getMagicPageForType(EnumNames.aboutUs).Description}}</div>
+            <h2>{{getMagicPageForType(EnumNames.aboutUs).Title}}</h2>
+        </div>
+        <div class="row clearfix">
+            <!--Image Column-->
+            <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                <div class="image">
+                    <iframe class="videoContainer__video" loop  [src] ="getVideoUrl(EnumNames.aboutUs)"></iframe>
+                </div>
+            </div>
+            <!--Content Column-->
+            <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                <div class="inner-column">
+                    <div class="text">
+                        <p>{{getMagicPageForType(EnumNames.aboutUs).Content}}</p>
+                    </div>
+                    <a pageScroll href="#scroll-to-services" class="theme-btn btn-style-two">
+                        Перейти до {{getMagicPageForType(EnumNames.services).Title}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

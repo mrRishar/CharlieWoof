@@ -1,0 +1,123 @@
+.team-section .inner-container table {
+    /* border-collapse: collapse; */
+    /* height: 100vh; */
+}
+
+.team-section .inner-container th,
+td {
+    /* padding: 8px; */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+    padding-top: 10px;
+}
+
+.pet-name {
+    text-align: left;
+    padding-left: 34px;
+}
+
+.team-section .inner-container #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(62, 53, 53);
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 15px;
+    font-family: Monotype Corsiva, cursive;
+}
+
+.prices-table {
+    width: 100%;
+}
+
+/* 
+.team-section .inner-container #customers th p {
+    font-family: Monotype Corsiva, cursive;
+    font-size: 250%;
+} */
+
+.team-section .inner-container #customers tr {
+    background-color: #ffffff;
+}
+
+.team-section .inner-container #customers tr td {
+    text-align: center;
+}
+
+.team-section .inner-container #customers tr:hover {
+    color: rgb(247, 204, 63);
+}
+
+.team-section .inner-container .imageprice {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td {
+    font-size: 15px;
+}
+
+th {
+    color: #393939;
+    text-align: center;
+    font-family: Poppins;
+}
+
+.price-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+p {
+    color: #393939;
+    font-weight: 540;
+    font-size: 2rem;
+    font-family: Poppins;
+}
+
+.div-overflow {
+    overflow: none;
+}
+
+.table-header-mob {
+    display: none;
+}
+
+.price-title {
+    text-align: center;
+}
+
+.ul-font-size {
+    font-size: 14px
+}
+
+.prices-table {
+    width: 100%;
+}
+
+.p-font-size {
+    font-size: 16px;
+}
+
+.pet-name {
+    text-align: left !important;
+    padding-left: 34px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .table-header-mob {
+        display: inline;
+        font-size: 14px
+    }
+    .price-padding {
+        padding-left: 40px;
+    }
+    .table-header-desctop {
+        display: none;
+    }
+}

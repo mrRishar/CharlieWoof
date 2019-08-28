@@ -1,0 +1,89 @@
+<!--Contact Section-->
+<section class="contact-section">
+
+    <div class="auto-container">
+        <!--Sec Title-->
+        <div class="sec-title centered">
+            <div class="separator">
+                <span class="icon flaticon-pawprint-1"></span>
+            </div>
+            <div class="title">{{getMagicPageForType(EnumNames.contact)?.Description}}</div>
+            <h2>{{getMagicPageForType(EnumNames.contact)?.Title}}</h2>
+        </div>
+        <!-- <div class="sec-title">
+            <h2>Get In Touch</h2>
+            <div class="title">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. </div>
+        </div> -->
+        <div class="row clearfix">
+            <!--Form Column-->
+            <div class="form-column col-md-7 col-sm-12 col-xs-12">
+
+                <!--Contact Form-->
+                <div class="contact-form">
+                    <form [formGroup]="sendFormDate" (ngSubmit)="contactForm()">
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <input type="email" name="email" value="" placeholder="Email Address*" [(ngModel)]="contactUs.email" 
+                            formControlName="userEmail" required>
+                        </div>
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <input type="text" name="subject" value="" placeholder="Subject*" [(ngModel)]="contactUs.subject"
+                            formControlName="userName" required>
+                        </div>
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message*" [(ngModel)]="contactUs.message"  formControlName="message"></textarea>
+                        </div>
+                        <div class = ".alert-error-contactUs" *ngIf="sendFormDate.invalid && submitted">
+                                <label> Будь ласка, введіть дані у кожному з наведених полів</label> 
+                              </div>
+                        <!--Form Group-->
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn btn-style-four">Надіслати</button>
+                        </div>
+                    </form>
+                </div>
+                <!--Contact Form-->
+
+            </div>
+            <!--Info Column-->
+            <div class="info-column col-md-5 col-sm-12 col-xs-12">
+                <div class="inner-column">
+                    <ul>
+                        <li>
+                            <span>Адреса:</span>{{getMagicPageForType(EnumNames.contact)?.Content}}</li>
+                        <li>
+                            <span>Тел:</span>{{getMagicPageForType(EnumNames.contact)?.SeoTitle}}</li>
+                        <li>
+                            <span>email:</span>{{getMagicPageForType(EnumNames.contact)?.SeoDescription}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <modal id="custom-modal-1" style="z-index:998;">
+        <div class="modal-background">
+            <div class="notification-window">
+                <img src="{{getMagicPageForType(EnumNames.contact).SeoKeywords}}" style="height: 85px;">
+                <h3 class="notification-header1">Дякуємо що зв'язалися з нами!</h3>
+                <h4 class="notification-header2">Повідомлення успішно відправлено</h4>
+                <button class="notification-button" (click)="closeModal('custom-modal-1');">Закрити</button>
+            </div>
+            <div class="modal-background1"></div>
+        </div>
+    </modal>
+</section>
+<!--End Contact Section-->
+
+<!--Map Section-->
+<section class="map-section">
+    <!--Map Outer-->
+    <div class="map-outer">
+        <!--Map Canvas-->
+        <agm-map [zoom]="15" style="height: 400px;" [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
+    </div>
+</section>
+<!--End Map Section-->

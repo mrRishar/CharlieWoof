@@ -1,0 +1,225 @@
+<div #clickTable>
+    <div *ngIf="userSide">
+        <div class="main-div" #clickTable>
+            <div class="control-panel">
+                <div class="portlet">
+                    <div class="panel">
+                        <p *ngIf="!addButton">Список адміністраторів</p>
+                        <p *ngIf="addButton">Список грумерів</p>
+                        <div class="statusButton">
+                            <div class="add-button" *ngIf="addButton">
+                                <a class="aLink status" [routerLink]="['/ControlPanel/Grummers/newUser']" routerLinkActive="active">
+                                    <span class="add-link">+ Створити</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead style="background-color: #edeef3;">
+                            <tr>
+                                <th class="clr-col-1 headerDataGrid">#</th>
+                                <th class="clr-col-2 headerDataGrid">Ім'я</th>
+                                <th class="clr-col-3 headerDataGrid">Прізвище</th>
+                                <th class="clr-col-3 headerDataGrid">Електрона пошта</th>
+                                <th class="clr-col-2 headerDataGrid">Телефон</th>
+                                <th class="clr-col-1 headerDataGrid"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users; let i = index;" class="tr-pageDuilder">
+                                <td class="clr-col-1 titleDataGrid ">{{i+1}}</td>
+                                <td class="clr-col-2 titleDataGrid ">
+                                    <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                                        {{user?.Firstname}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-3 titleDataGrid ">
+                                    <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                                        {{user?.Secondname}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-3 titleDataGrid ">
+                                    <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                                        {{user?.Email}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-2 titleDataGrid ">
+                                    <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                                        {{user?.Phone}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-1 titleDataGrid ">
+                                    <div class="actions">
+                                        <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                                            <span>
+                                                <img src="./../../../../../../assets/app/media/images/icon/edit.svg" style="height: 17px;">
+                                                <span>Редагувати</span>
+                                            </span>
+                                        </a>
+                                        <a class="aLink" [routerLink]="['/ControlPanel/Users/changePassword', user.Id]" routerLinkActive="active">
+                                            <span>
+                                                <img src="./../../../../../../assets/app/media/images/icon/key.svg" style="height: 17px;">
+                                                <span> Змінити пароль</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="clientSide">
+        <div class="main-div">
+            <div class="control-panel">
+                <div class="portlet">
+                    <div class="panel">
+                        <p>Список клієнтів</p>
+                        <div class="statusButton">
+                            <div class="add-button">
+                                <a class="aLink status" [routerLink]="['/ControlPanel/Clients/newUser']" routerLinkActive="active">
+                                    <span class="add-link">+ Створити</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-striped">
+                        <thead style="background-color: #edeef3;">
+                            <tr>
+                                <th class="clr-col-2 headerDataGrid">#</th>
+                                <th class="clr-col-3 headerDataGrid">Ім'я</th>
+                                <th class="clr-col-3 headerDataGrid">Прізвище</th>
+                                <th class="clr-col-3 headerDataGrid">Домашні улюбленці</th>
+                                <th class="clr-col-1 headerDataGrid">Дії</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- [routerLink]="['/ControlPanel/Clients/edit', user.Id]" -->
+                            <tr *ngFor="let user of users; let i = index;" class="tr-pageDuilder">
+                                <td class="clr-col-2 titleDataGrid ">{{i+1}}</td>
+                                <td class="clr-col-3 titleDataGrid ">
+                                    <a class="aLink">
+                                        {{user?.Firstname}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-3 titleDataGrid ">
+                                    <a class="aLink">
+                                        {{user?.Secondname}}
+                                    </a>
+                                </td>
+                                <td class="clr-col-3 titleDataGrid">
+                                    <ul *ngFor="let pet of user?.Pets">
+                                        <a class="aLink" [routerLink]="['/ControlPanel/Pets/edit', pet.Id]" routerLinkActive="active">
+                                            {{pet?.Name}}
+                                        </a>
+                                    </ul>
+
+                                </td>
+                                <td class="clr-col-1 titleDataGrid">
+                                    <div class="actions">
+                                        <div *ngIf="showClientData">
+                                            <a class="aLink" [routerLink]="['/ControlPanel/Clients/edit', user.Id]" routerLinkActive="active">
+                                                <span>
+                                                    <img src="./../../../../../../assets/app/media/images/icon/edit.svg" style="height: 17px;">
+                                                    <span>Редагувати</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="notification-buttonX" (click)="clientPetsClick($event, user?.Id)"> -->
+                                        <a class="aLink" [routerLink]="['/ControlPanel/Orders/clientOrders', user.Id]" routerLinkActive="active">
+                                            <img src="./../../../../../../assets/app/media/images/icon/order.svg" style="height: 17px;"> Замовлення
+                                        </a>
+                                        <a class="aLink" [routerLink]="['/ControlPanel/Pets/clientPets', user.Id]" routerLinkActive="active">
+                                            <img src="./../../../../../../assets/app/media/images/icon/pet.svg" style="height: 17px;"> Домашні улюбленці
+                                        </a>
+                                        <!-- <div *ngIf="showClientData">
+                        <ul class="ul-client">
+                            <a class="notification-buttonX" (click)="openModalClick($event, user?.Id)">
+                                <img src="./../../../../../../assets/app/media/images/trash.svg" style="height: 17px;"> Видалити
+                            </a>
+                        </ul>-->
+                                    </div>
+                                </td>
+                                <modal id="custom-modal-1" style="z-index:998;">
+                                    <div class="modal-background">
+                                        <div class="notification-window">
+                                            <h4 class="notification-header">Видалити дану секцію?</h4>
+                                            <button class="notification-button" (click)="deleteSectionClick($event)">Продовжити</button>
+                                            <button class="notification-button" (click)="closeModal('custom-modal-1');">Скасувати</button>
+                                        </div>
+                                        <div class="modal-background1"></div>
+                                    </div>
+                                </modal>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
+    <clr-dg-action-bar>
+    </clr-dg-action-bar>
+    <!-- <clr-dg-column class="clr-col-1 headerDataGrid">
+        #
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-2 headerDataGrid">
+        Ім'я
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-3 headerDataGrid">
+        Прізвище
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-3 headerDataGrid">
+        Електрона пошта
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-2 headerDataGrid">
+        Телефон
+    </clr-dg-column>
+    <clr-dg-column class="clr-col-1 headerDataGrid">
+    </clr-dg-column>
+
+    <clr-dg-row *ngFor="let user of users; let i = index;">
+        <clr-dg-cell class="clr-col-1 titleDataGrid">
+            {{i+1}}
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-2 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                {{user?.Firstname}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-3 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                {{user?.Secondname}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-3 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                {{user?.Email}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-2 titleDataGrid">
+            <a class="aLink" [routerLink]="['/ControlPanel/Users/edit', user.Id]" routerLinkActive="active">
+                {{user?.Phone}}
+            </a>
+        </clr-dg-cell>
+        <clr-dg-cell class="clr-col-1 titleDataGrid">
+            <a [routerLink]="['/ControlPanel/Users/changePassword', user.Id]" routerLinkActive="active">
+                <span class="changePassword fa fa-lock"></span>
+            </a>
+        </clr-dg-cell>
+    </clr-dg-row>
+    <clr-dg-footer>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} секцій з {{pagination.totalItems}}
+        <clr-dg-pagination #pagination [clrDgPageSize]="10" [clrDgTotalItems]="totalCount"></clr-dg-pagination>
+    </clr-dg-footer> -->
+</clr-datagrid>
+<clr-dg-action-bar>
+    <clr-button-group class="btn-lg">
+
+    </clr-button-group>
+</clr-dg-action-bar>

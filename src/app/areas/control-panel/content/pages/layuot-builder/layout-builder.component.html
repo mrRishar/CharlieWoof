@@ -1,0 +1,313 @@
+<!-- <div class="m-portlet m-portlet--tabs">
+	<form class="m-form m-form--label-align-right m-form--fit" novalidate #builderForm="ngForm" (ngSubmit)="submitPreview(builderForm)">
+		<div class="m-portlet__body">
+
+			<mat-tab-group>
+				<mat-tab label="Сторінка">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Тип макета:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[self][layout]" [(ngModel)]="model.self.layout">
+									<option value="fluid">Текучий</option>
+									<option value="boxed">Оточувати</option>
+									<option value="boxed">Широкий</option>
+								</select>
+								<span class="m-form__help">Виберіть тип макета сторінки</span>
+							</div>
+						</div>
+					
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Колір вмісту:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[content][skin]" [(ngModel)]="model.content.skin">
+									<option value="light">Білий</option>
+									<option value="light2">Світло-сірий</option>
+								</select>
+								<span class="m-form__help">Виберіть колір вмісту</span>
+							</div>
+						</div>
+					</div>
+				</mat-tab>
+				<mat-tab label="Заголовок">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Настільний фіксований заголовок:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[header][self][fixed][desktop]" value="true" [(ngModel)]="model.header.self.fixed.desktop" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Увімкніть фіксований заголовок для режиму робочого столу</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Мобільний фіксований заголовок:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[header][self][fixed][mobile]" value="true" [(ngModel)]="model.header.self.fixed.mobile" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Увімкнути фіксований заголовок для мобільного режиму</div>
+							</div>
+						</div>
+
+						<div class="m-separator m-separator--dashed"></div>
+
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Меню заголовка дисплея:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[menu][header][display]" value="true" [(ngModel)]="model.menu.header.display" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Меню заголовка дисплея</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Скидання випадаючого списку (Desktop):</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[menu][header][desktop][submenu][skin]" [(ngModel)]="model.menu.header.desktop.submenu.skin">
+									<option value="light">Світла</option>
+									<option value="dark">Темна</option>
+								</select>
+								<span class="m-form__help">Виберіть зі спадного списку меню заголовка</span>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Показувати стрілку підменю (Desktop):</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[menu][header][desktop][submenu][arrow]" value="true" [(ngModel)]="model.menu.header.desktop.submenu.arrow" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Відобразити меню заголовка зі спадних стрілок у режимі робочого столу</div>
+							</div>
+						</div>
+
+						<div class="m-separator m-separator--dashed"></div>
+
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Тип пошуку:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[header][search][type]" [(ngModel)]="model.header.search.type">
+									<option value="search-default">Розширюваний пошук</option>
+									<option value="search-dropdown">Випадаючий пошук</option>
+								</select>
+								<span class="m-form__help">Будь ласка, введіть тип пошуку заголовка</span>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Випадаюче меню:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[header][search][dropdown][skin]" [(ngModel)]="model.header.search.dropdown.skin">
+									<option value="light">Світле</option>
+									<option value="dark">Темне</option>
+								</select>
+								<span class="m-form__help">Виберіть випадаюче меню результатів пошуку для випадаючого типу пошуку</span>
+							</div>
+						</div>
+					</div>
+				</mat-tab>
+				<mat-tab label="Ліворуч">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row m--hide">
+							<label class="col-lg-4 col-form-label">Відображення в стороні:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][left][display]" value="true" [(ngModel)]="model.aside.left.display" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Відображається ліворуч</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Ліва сторона:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[aside][left][skin]" [(ngModel)]="model.aside.left.skin">
+									<option value="dark">Темна</option>
+									<option value="light">Світла</option>
+								</select>
+								<div class="m-form__help">Встановіть ліву сторону </div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Фіксований макет:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][left][fixed]" value="true" [(ngModel)]="model.aside.left.fixed" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Встановіть фіксований макет</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Дозволити ліву мінімізацію:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][left][minimize][toggle]" value="true" [(ngModel)]="model.aside.left.minimize.toggle" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Дозволити ліву мінімізацію</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">За замовчуванням мінімізовано:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][left][minimize][default]" value="true" [(ngModel)]="model.aside.left.minimize.default" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Встановіть за замовчуванням мінімізацію</div>
+							</div>
+						</div>
+
+						<div class="m-separator m-separator--dashed"></div>
+
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Перемикання підменю:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[menu][aside][desktop_and_mobile][submenu][accordion]" [(ngModel)]="model.menu.aside.desktop_and_mobile.submenu.accordion">
+									<option [ngValue]="false">Випадаюче меню</option>
+									<option [ngValue]="true">Гармошка</option>
+								</select>
+								<div class="m-form__help">Виберіть режим перемикання підменю</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">
+									Випадаюче підменю макету:</label>
+							<div class="col-lg-8 col-xl-4">
+								<select class="form-control" name="builder[menu][aside][submenu][skin]" [(ngModel)]="model.menu.aside.desktop_and_mobile.submenu.skin">
+									<option value="inherit">Успадковувати</option>
+									<option value="dark">Темне</option>
+									<option value="light">Світле</option>
+								</select>
+								<div class="m-form__help">Виберіть підменю макету. Якщо вибирається
+									<code>успадкування</code> - воно буде використовувати макет лівого боку.</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Стрілка підменю:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[menu][aside][submenu][dropdown][arrow]" value="true" [(ngModel)]="model.menu.aside.desktop_and_mobile.submenu.dropdown.arrow" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Увімкнути стрілку випадаючого підменю</div>
+							</div>
+						</div>
+					</div>
+				</mat-tab>
+				<mat-tab label="Праворуч">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Відображення праворуч:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][right][display]" value="true" [(ngModel)]="model.aside.right.display" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Відображення праворуч</div>
+							</div>
+						</div>
+					</div>
+				</mat-tab>
+				<mat-tab label="Нижній колонтитул">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Виправлено нижній колонтитул:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[footer][fixed]" value="true" [(ngModel)]="model.footer.fixed" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Встановіть фіксований заголовок</div>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<label class="col-lg-4 col-form-label">Нижній колонтитул:</label>
+							<div class="col-lg-8 col-xl-4">
+								<span class="m-switch m-switch--icon-check">
+									<label>
+										<input type="checkbox" name="builder[aside][left][push_footer]" value="true" [(ngModel)]="model.aside.left.push_footer" />
+										<span></span>
+									</label>
+								</span>
+								<div class="m-form__help">Відсунути нижній колонтитул праворуч</div>
+							</div>
+						</div>
+					</div>
+				</mat-tab>
+			</mat-tab-group>
+
+		</div>
+
+		<div class="m-portlet__foot m-portlet__foot--fit">
+			<div class="m-form__actions">
+				<div class="row">
+					<div class="col-lg-4"></div>
+					<div class="col-lg-8 ">
+						<button type="submit" name="builder_submit" data-demo="" class="btn btn-primary m-btn m-btn--icon m-btn--wide m-btn--air m-btn--custom">
+							<span>
+								<i class="la la-eye"></i>
+								<span>Попередній перегляд</span>
+							</span>
+						</button>
+						&nbsp;
+						<button type="submit" name="builder_submit" data-demo="" class="btn btn-accent m-btn m-btn--icon m-btn--wide m-btn--air m-btn--custom">
+							<span>
+								<i class="la la-cog"></i>
+								<span>Експорт</span>
+							</span>
+						</button>
+						&nbsp;
+						<button type="submit" (click)="resetPreview($event)" name="builder_reset" class="btn btn-secondary m-btn m-btn--icon m-btn--wide m-btn--air m-btn--custom">
+							<span>
+								<i class="la la-recycle"></i>
+								<span>Скинути</span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<m-portlet>
+	<ng-container mPortletHeadTitle>
+		<div class="m-portlet__head-title">
+			<h3 class="m-portlet__head-text">
+				Generated Config <small>can be used for layout config in <code>/src/app/config/layout.ts</code></small>
+			</h3>
+		</div>
+	</ng-container>
+	<ng-container mPortletBody>
+		<div perfectScrollbar style="max-height: 400px">
+		</div>
+		<pre><code highlight class="json">{{model|json}}</code></pre>
+	</ng-container>
+</m-portlet> -->

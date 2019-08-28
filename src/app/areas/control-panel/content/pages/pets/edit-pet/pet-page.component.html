@@ -1,0 +1,95 @@
+<div class="main-div">
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Форма домашнього улюбденця</p>
+                <div class="statusButton">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <!-- <div class="magicPageFormBlock"> -->
+                    <form [formGroup]="PetFrom">
+                        <section class="form-block">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="name">
+                                        Кличка
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+
+                                    <input class="form-control" type="text" placeholder="{{petModel.name}}" [(ngModel)]="petModel.name" formControlName="name">
+                                </div>
+                            </div>
+                            <input type="hidden" formControlName="id">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="ownerName">
+                                        Власник
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{petModel.ownerName}}" [(ngModel)]="petModel.ownerName" formControlName="ownerName"
+                                        disabled>
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="breed">
+                                        Порода
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{petModel.breed}}" [(ngModel)]="petModel.breed" formControlName="breed">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="birthday">
+                                        Дата народжкння
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="datetime" placeholder="mm/dd/yyyy" [(ngModel)]="petModel.birthday" formControlName="birthday">
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="note">
+                                        Нотатка
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{petModel.note}}" [(ngModel)]="petModel.note"
+                                        formControlName="note"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="image">
+                                        Зображення
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{petModel.image}}" [(ngModel)]="petModel.image"
+                                        formControlName="image"></textarea>
+                                    <div class="panel" *ngIf="submitted && cheakVal">
+                                        <label class="panel"> Заповніть кожне з наведених полів</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xl-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-accent notification-button success" (click)="savePetClick($event)">Зберегти</button>
+                                    <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+<section class="appointment-section" style="background-image:url(../../../../../../../assets/app/media/images/background/3.jpg)">
+    <div class="auto-container">
+        <!--Sec Title-->
+        <div class="sec-title light centered">
+            <div class="separator">
+                <span class="icon flaticon-pawprint-1"></span>
+            </div>
+            <div class="title">{{getMagicPageForType(EnumNames.appointment).Description}}</div>
+            <h2>{{getMagicPageForType(EnumNames.appointment).Title}}</h2>
+        </div>
+
+        <!--Default Form-->
+        <div class="default-form">
+            <div class="form-box">
+                <form [formGroup]="sendFormDate" (ngSubmit)="onSubmit(); sendFormDate.reset()">
+                    <div class="row clearfix">
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input class="form-control" name="name" placeholder="Ім'я" [(ngModel)]="sendedEmail.name" formControlName="userName">
+                            <!-- [ngClass]="{ 'is-invalid': submitted && f.userName.errors }"> -->
+
+                            <!-- <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                                <div *ngIf="f.userName.errors.required">First Name is required</div>
+                            </div> -->
+
+                            <!-- <div class="alert alert-danger"
+                            *ngIf="sendFormDate.controls['userName'].invalid && sendFormDate.controls['userName'].touched">
+                            Не указано имя
+                        </div> -->
+
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input class="form-control" name="email" placeholder="Емейл" [(ngModel)]="sendedEmail.email" formControlName="userEmail"
+                                required>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input class="form-control" name="phone" value="" placeholder="Телефон" [(ngModel)]="sendedEmail.phone" formControlName="userPhone"
+                                required>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input class="form-control" name="service" placeholder="Сервіс(тримінг, купання...)" [(ngModel)]="sendedEmail.services" formControlName="userServices">
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input class="form-control" name="breed" value="" placeholder="Порода" [(ngModel)]="sendedEmail.breed" formControlName="userBreed">
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <span class="clock-icon">
+                                <span class="icon fa fa-calendar"></span>
+                            </span>
+                            <input name="date" class="datepicker" placeholder="Дата та час:" [(ngModel)]="sendedEmail.date" formControlName="userDate"
+                                datetime="yyyy.MM.dd" [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" [min]="today" [max]="EndDate"
+                                [owlDateTimeFilter]="myFilter">
+                            <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input name="period" type="time" value={{curentTime}} min={{curentDatee}} max="20:00" [(ngModel)]="sendedEmail.startTime"
+                                formControlName="userPeriod1">
+                        </div>
+                        <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                            <input name="period" type="time" value={{sendedEmail.startTime}} min={{sendedEmail.startTime}} max="20:00" [(ngModel)]="sendedEmail.endTime"
+                                formControlName="userPeriod2">
+                        </div>
+
+                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <textarea placeholder="Коментарій..." name="message" [(ngModel)]="sendedEmail.message" formControlName="userMessage"></textarea>
+                        </div>
+                        <div class="alert-error" *ngIf="sendFormDate.invalid && submitted">
+                            <label> Будь ласка, введіть дані у кожному з наведених полів</label>
+                        </div>
+                        <div class="form-group text-center col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" class="theme-btn btn-style-two" style="margin-left: auto;
+                            margin-right: auto;">Забронювати</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Default Form-->
+    </div>
+    <modal id="custom-modal-2" style="z-index:998;">
+        <div class="modal-background">
+            <div class="notification-window-app">
+                <img src="{{getMagicPageForType(EnumNames.contact).SeoKeywords}}" style="height: 85px;">
+                <h3 class="notification-header1">Дякуємо що з'єдналися з нами!</h3>
+                <h4 class="notification-header2">Запис було успішно надіслано!</h4>
+                <button class="notification-button" (click)="closeModal('custom-modal-2');">Закрити</button>
+            </div>
+            <div class="modal-background1"></div>
+        </div>
+    </modal>
+</section>
+
+
+
+<!-- <modal id="custom-modal-2">
+    <div class="modal">
+        <div class="modal-body">
+            <h1 style="height:1000px">A Tall Custom Modal!</h1>
+            <button (click)="closeModal('custom-modal-2');">Close</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal> -->

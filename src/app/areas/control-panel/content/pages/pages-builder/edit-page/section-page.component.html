@@ -1,0 +1,103 @@
+<div class="main-div">
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Форма сторінки</p>
+                <div class="statusButton">
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <form [formGroup]="magicPageFrom">
+                        <section class="form-block">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="title">
+                                        Заголовок
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicPage.title}}" [(ngModel)]="magicPage.title" formControlName="title">
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <input class="form-control" type="hidden" placeholder="{{magicPage.type}}" [(ngModel)]="magicPage.type" formControlName="type">
+                            </div>
+                            <input type="hidden" formControlName="id">
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="description">
+                                        Опис
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="{{magicPage.description}}" [(ngModel)]="magicPage.description" formControlName="description">
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="content">
+                                        Вміст
+                                    </label>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{magicPage.content}}" [(ngModel)]="magicPage.content" formControlName="content"> -->
+                                <!-- <div class="froalaOptions" [froalaEditor]="froalaOptions" formControlName="content">{{magicPage.content}}</div> -->
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicPage.content}}" [(ngModel)]="magicPage.content"
+                                        formControlName="content"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="seoTitle">
+                                        Додатковий опис
+                                    </label>
+                                </div>
+                                <!-- <input class="form-control" type="text" placeholder="{{magicPage.seoTitle}}" [(ngModel)]="magicPage.seoTitle" formControlName="seoTitle"> -->
+                                <!-- <div class="froalaOptions" [froalaEditor]="froalaOptions" formControlName="seoTitle">{{magicPage.seoTitle}}</div>-->
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicPage.seoTitle}}" [(ngModel)]="magicPage.seoTitle"
+                                        formControlName="seoTitle"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="seoDescription">
+                                        Додатковий вміт
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicPage.seoDescription}}"
+                                        [(ngModel)]="magicPage.seoDescription" formControlName="seoDescription"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group1 shadow-textarea">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="seoKeywords">
+                                        Зображення
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="{{magicPage.seoKeywords}}"
+                                        [(ngModel)]="magicPage.seoKeywords" formControlName="seoKeywords"></textarea>
+
+                                    <div class="panel" *ngIf="submitted && cheakVal">
+                                        <label class="panel"> Заповніть кожне з наведених полів</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xl-3">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-accent notification-button success" (click)="saveMagicPageClick($event)">Зберегти</button>
+                                    <button type="button" class="notification-button danger" (click)="cancelClick($event)">Відмінити</button>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

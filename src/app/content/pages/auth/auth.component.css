@@ -1,0 +1,11 @@
+#slideshow {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  #slideshow > div {
+    position: absolute;
+   
+  }

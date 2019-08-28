@@ -1,0 +1,234 @@
+<section class="team-section" #target>
+    <!--Pricing Section-->
+    <section class="pricing-section">
+        <div class="auto-container">
+            <!--Sec Title-->
+            <div class="sec-title centered">
+                <div class="separator">
+                    <span class="icon flaticon-pawprint-1"></span>
+                </div>
+                <div class="title">{{getMagicPageForType(EnumNames.prices)?.Description}}</div>
+                <h2>{{getMagicPageForType(EnumNames.prices)?.Title}}</h2>
+            </div>
+            <!--Sec Title Two-->
+            <div class="inner-container">
+                <div class="div-overflow">
+                    <!-- <div class="table-header-mob">
+                        <p>{{getMagicPageForType(EnumNames.pricesTible1).Description}}</p>
+                        {{getMagicPageForType(EnumNames.pricesTible1).Content}}
+                        <p>{{getMagicPageForType(EnumNames.pricesTible1).SeoTitle}}</p>
+                        {{getMagicPageForType(EnumNames.pricesTible1).SeoDescription}}
+                    </div> -->
+
+                    <p>{{getMagicPageForType(EnumNames.pricesTible1)?.Description}}</p>
+                    <ul class="ul-font-size">{{getMagicPageForType(EnumNames.pricesTible1)?.Content}}</ul>
+                    <table id="customers" class="prices-table">
+                        <thead>
+                            <tr>
+                                <th class="clr-col-8"></th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Старший грумер</p>
+                                    <!-- {{getMagicPageForType(EnumNames.pricesTible1).Content}} -->
+                                </th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Молодший грумер</p>
+                                    <!-- {{getMagicPageForType(EnumNames.pricesTible1).SeoDescription}} -->
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible1)">
+                                <td class="pet-name">{{item?.Title}}</td>
+                                <td class="price-padding">{{item?.Description}}</td>
+                                <td class="price-padding">{{item?.Content}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>{{getMagicPageForType(EnumNames.pricesTible1)?.SeoTitle}}</p>
+                    <ul class="ul-font-size">{{getMagicPageForType(EnumNames.pricesTible1)?.SeoDescription}}</ul>
+                    <table id="customers" class="prices-table">
+                        <thead>
+                            <tr>
+                                <th class="clr-col-8"></th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Старший грумер</p>
+                                </th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Молодший грумер</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible1)">
+                                <td class="pet-name">{{item?.Title}}</td>
+                                <td class="price-padding">{{item?.Description}}</td>
+                                <td class="price-padding">{{item?.Content}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <!-- <table id="customers">
+                        <thead>
+                            <tr>
+                                <th class="clr-col-8"></th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p>{{getMagicPageForType(EnumNames.pricesTible1).Description}}</p>
+                                    {{getMagicPageForType(EnumNames.pricesTible1).Content}}
+                                </th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p>{{getMagicPageForType(EnumNames.pricesTible1).SeoTitle}}</p>
+                                    {{getMagicPageForType(EnumNames.pricesTible1).SeoDescription}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible1)">
+                                <td>{{item.title}}</td>
+                                <td class="price-padding">{{item.description}}</td>
+                                <td class="price-padding">{{item.content}}</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+
+
+
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-triming"></div>
+                    <!-- <div class="table-header-mob">
+                        <p>{{getMagicPageForType(EnumNames.pricesTible2).Description}}</p>
+                        {{getMagicPageForType(EnumNames.pricesTible2).Content}}
+                    </div> -->
+
+                    <p>{{getMagicPageForType(EnumNames.pricesTible2)?.Description}}</p>
+                    <ul class="ul-font-size">{{getMagicPageForType(EnumNames.pricesTible2)?.Content}}</ul>
+                    <table id="customers" class="prices-table">
+                        <thead>
+                            <tr>
+                                <th class="clr-col-8"></th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Старший грумер</p>
+                                </th>
+                                <th class="clr-col-2" class="table-header-desctop">
+                                    <p class="p-font-size">Молодший грумер</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible2)">
+                                <td class="pet-name">{{item?.Title}}</td>
+                                <td class="price-padding">{{item?.Description}}</td>
+                                <td class="price-padding">{{item?.Content}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--                   
+                    <table class="table table-striped" id="customers">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="table-header-desctop">
+                                    <p>{{getMagicPageForType(EnumNames.pricesTible2).Description}}</p>
+                                    {{getMagicPageForType(EnumNames.pricesTible2).Content}}
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible2)">
+                                <td>{{item.title}}</td>
+                                <td class="price-padding">{{item.description}}</td>
+                                <td class="price-padding">{{item.content}}</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+
+
+                    <!-- <table class="table table-striped" id="customers">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="table-header-desctop">
+                                        <p>{{getMagicPageForType(EnumNames.pricesTible2).Description}}</p>
+                                        {{getMagicPageForType(EnumNames.pricesTible2).Content}}
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of getContentItems(EnumNames.pricesTible2)">
+                                    <td>{{item.title}}</td>
+                                    <td class="price-padding">{{item.description}}</td>
+                                    <td class="price-padding">{{item.content}}</td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+
+
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-cats"></div>
+                    <!-- <div class="table-header-mob">
+                        <p>{{getMagicPageForType(EnumNames.pricesTible3).Description}}</p>
+                    </div> 
+                    <div class="table-header-desctop">-->
+                        <p>{{getMagicPageForType(EnumNames.pricesTible3)?.Description}}</p>
+                    <!-- </div> -->
+                    <table class="prices-table" id="customers">
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible3)">
+                                <td class="pet-name">{{item?.Title}}</td>
+                                <td class="price-padding">{{item?.Description}}</td>
+                                <td class="price-padding">{{item?.Content}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="auto-container" style="margin-top:20px">
+                        <div class="sec-title centered">
+                            <div class="separator">
+                                <span class="icon flaticon-pawprint-1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="scroll-to-prices-plass"></div>
+                    <!-- <div class="table-header-mob">
+                        <p>{{getMagicPageForType(EnumNames.pricesTible4).Description}}</p>
+                    </div> -->
+                    <!-- <div class="table-header-desctop"> -->
+                        <p>{{getMagicPageForType(EnumNames.pricesTible4)?.Description}}</p>
+                    <!-- </div> -->
+                    <table class="prices-table" id="customers">
+                        <tbody>
+                            <tr *ngFor="let item of getContentItems(EnumNames.pricesTible4)">
+                                <td class="pet-name">{{item?.Title}}</td>
+                                <td class="price-padding">{{item?.Description}}</td>
+                                <td class="price-padding">{{item?.Content}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Pricing Section-->
+</section>

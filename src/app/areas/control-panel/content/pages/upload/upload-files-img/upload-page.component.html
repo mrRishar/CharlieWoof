@@ -1,0 +1,131 @@
+<div class="main-div" #clickTable>
+    <div class="control-panel">
+        <div class="portlet">
+            <div class="panel">
+                <p>Форма завантаження зображення/файлу</p>
+                <div class="statusButton">
+                    <!-- <div class="add-button">
+                        <a class="aLink status" [routerLink]="['/ControlPanel/pagesBuilder/newSection']" routerLinkActive="active">
+                            <span class="add-link">+ Створити</span>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <!-- <div class="userFormBlock"> -->
+                    <div class="div-form">
+                        <section class="form-block">
+                            <!-- <div class="panel">
+                    <p>Форма завантаження зображення/файлу:</p>
+                </div> -->
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="name">
+                                        Назва
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <input class="form-control" type="text" placeholder="Назва" [(ngModel)]="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group1">
+                                <div class="col-lg-8 col-xl-3">
+                                    <label class="label-form" for="fileOrImg">
+                                        Тип
+                                    </label>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <div class="type">
+                                        <input type="radio" id="fileOrImg1" name="type" value="1" (change)="radioChange($event)">
+                                        <label for="fileOrImg1" class="typeRadio"> Файл</label>
+                                        <input type="radio" id="fileOrImg2" name="type" value="2" (change)="radioChange($event)">
+                                        <label for="fileOrImg2"> Зображення</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+                            <!-- <button type="submit" class="btn-large btn-submit" [disabled]="Image.value=='' || !imageForm.valid">Submit</button> -->
+                            <!-- <div class="col-md-4">
+                                <span class="upload" *ngIf="progress > 0">
+                                    {{progress}}%
+                                </span>
+                            </div> -->
+                            <button type="button" class="btn-accent notification-button success" (click)="file.click()">Завантажити</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<modal id="custom-modal-1" style="z-index:998;">
+    <div class="modal-background">
+        <div class="notification-window">
+            <img class="warning-icon" src="./../../../../../../assets/app/media/images/icon/success.svg">
+            <h4 class="notification-header">Завантажено!</h4>
+            <button class="notification-button success" (click)="closeModal('custom-modal-1');">Закрити</button>
+        </div>
+        <div class="modal-background1"></div>
+    </div>
+</modal>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col s8 offset-2">
+            <div class="card-panel teal lighten-2">
+                <h4 class="center white-text">Image Library</h4>
+            </div>
+            <form #imageForm=ngForm>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" [(ngModel)]="name" name="Caption" id="Caption" required>
+                        <label for="Caption">Caption</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" [(ngModel)]="fileOrImg" name="type" id="type" required>
+                        <label for="type">Caption</label>
+                    </div>
+                </div>
+                <img [src]="imageUrl" style="width:250px;height:200px">
+                <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+                <div class="col-md-4">
+                    <span class="upload" *ngIf="progress > 0">
+                        {{progress}}%
+                    </span>
+                    <span class="upload" *ngIf="message">
+                        {{message}}
+                    </span>
+                </div>
+                <button type="button" class="btn btn-success" (click)="file.click()" [disabled]="name.value=='' || fileOrImg.value==''">Upload File</button>
+                
+            </form>
+        </div>
+    </div>
+</div> -->
+<!-- <div class="row" style="margin-bottom:15px;">
+    <div class="col-md-3">
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+    </div>
+
+</div> -->
+<!-- action="http://localhost:63908/v1/MagicFiles/d_2dpXG2Vpo/1" method="post" enctype="multipart/form-data" -->
+<!-- 
+<div class="row">
+    <div class="col s8 offset-2">
+        <div class="card-panel teal lighten-2">
+            <h4 class="center white-text">Image Library</h4>
+        </div>
+        <form #imageForm=ngForm (ngSubmit)="OnSubmit(Caption,Image)">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" #Caption ngModel name="Caption" id="Caption" required>
+                    <label for="Caption">Caption</label>
+                </div>
+            </div>
+            <img [src]="imageUrl" style="width:250px;height:200px">
+            <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+            <button type="submit" class="btn-large btn-submit" [disabled]="Image.value=='' || !imageForm.valid">Submit</button>
+        </form>
+    </div>
+</div> -->
